@@ -1,6 +1,4 @@
 ---
-
-```markdown
 # 📰 FakeNewsGuard — AI-Powered Fake News Detection
 
 FakeNewsGuard is an AI-powered web application designed to detect fake news content. Users can input a news article or social media post to receive real-time predictions on whether the content is real or fake. The application also evaluates source credibility, analyzes sentiment and bias, checks for suspicious keywords, and provides summarized explanations.
