@@ -1,29 +1,33 @@
-Based on your uploaded files, here's a `README.md` that documents your **Fake News Detection Web Application** project:
-
 ---
 
 ```markdown
 # 📰 FakeNewsGuard — AI-Powered Fake News Detection
 
-FakeNewsGuard is an AI-powered web application designed to detect fake news content. It allows users to input a news article or social media post and get real-time predictions on whether the content is real or fake. The app also evaluates source credibility, performs sentiment and bias analysis, checks for suspicious keywords, and provides a summarized explanation.
+FakeNewsGuard is an AI-powered web application designed to detect fake news content. Users can input a news article or social media post to receive real-time predictions on whether the content is real or fake. The application also evaluates source credibility, analyzes sentiment and bias, checks for suspicious keywords, and provides summarized explanations.
+
+---
 
 ## 🔍 Features
 
-- 🧠 **AI-Powered Detection**: Uses a Logistic Regression model trained on TF-IDF features.
-- ✅ **Prediction Confidence**: Displays confidence percentage for the prediction.
-- 🔗 **Source Credibility Analysis**: Checks domain credibility and political bias.
-- 📊 **Sentiment & Bias Analyzer**: Evaluates emotional language and political leanings.
-- 🧾 **Fact Check Matching**: Flags known fake phrases and links to fact-checking sources.
-- 📄 **Auto Summary & Explanation**: Generates a brief summary and flags issues.
-- 💬 **Social Media Post Checker**: A separate form for analyzing tweets/posts.
-- 🎓 **Educational Resources**: Provides learning materials on fake news and misinformation.
+- 🧠 **AI-Powered Detection**: Utilizes a Logistic Regression model trained on TF-IDF features.
+- ✅ **Prediction Confidence**: Shows confidence percentage for each prediction.
+- 🔗 **Source Credibility Analysis**: Checks the domain’s credibility and political alignment.
+- 📊 **Sentiment & Bias Analyzer**: Identifies emotional tone and political leanings.
+- 🧾 **Fact Check Matching**: Flags common fake phrases and links to verified fact-checks.
+- 📄 **Auto Summary & Explanation**: Generates concise summaries and highlights problematic content.
+- 💬 **Social Media Post Checker**: Dedicated form to analyze social media posts.
+- 🎓 **Educational Resources**: Includes learning materials on fake news and digital literacy.
+
+---
 
 ## 🛠️ Tech Stack
 
 - **Backend**: Flask (Python)
-- **Frontend**: HTML, CSS (Custom modern UI), JavaScript (Chart.js)
-- **ML**: Scikit-learn (Logistic Regression, TF-IDF Vectorizer)
-- **Others**: Joblib, BeautifulSoup, Requests
+- **Frontend**: HTML, CSS (custom UI), JavaScript (Chart.js)
+- **Machine Learning**: Scikit-learn (Logistic Regression, TF-IDF Vectorizer)
+- **Utilities**: Joblib, BeautifulSoup, Requests
+
+---
 
 ## 📁 Project Structure
 
@@ -56,8 +60,9 @@ FAKE_NEWS_DETECTION/
 │
 ├── README.md
 └── requirements.txt
-      
 ```
+
+---
 
 ## 🚀 Getting Started
 
@@ -72,37 +77,43 @@ FAKE_NEWS_DETECTION/
    pip install -r requirements.txt
    ```
 
-3. **Train or load model**:
-   - Train the model using `fake_news_detection.ipynb`, or
-   - Ensure `logistic_model.pkl` and `tfidf_vectorizer.pkl` are in the `models/` folder.
+3. **Train or load the model**:
+   - Train using `notebook/fake_news_detection.ipynb`, **or**
+   - Ensure pre-trained `logistic_model.pkl` and `tfidf_vectorizer.pkl` are in the `models/` directory.
 
 4. **Run the app**:
    ```bash
-   python app.py
+   python app/app.py
    ```
 
-5. **Open in browser**:
+5. **View in browser**:
    ```
    http://localhost:5000
    ```
 
+---
+
 ## ⚠️ Disclaimer
 
-> This tool is trained on data from 2015–2017 and is for **demonstration and educational purposes** only. It is not suitable for use as a production-grade fact-checking tool.
+> This application is trained on historical news data (2015–2017) and is intended **solely for demonstration and educational purposes**. It should not be relied upon for official fact-checking or journalistic use.
+
+---
 
 ## 🙋‍♂️ Author
 
 **Pranav V P**
 
-- [LinkedIn](https://www.linkedin.com/in/pranav-vp-3636b825a/)
-- [Twitter/X](https://x.com/Pranav62196016)
-- [Instagram](https://www.instagram.com/pranav_vp_07)
+- 🔗 [LinkedIn](https://www.linkedin.com/in/pranav-vp-3636b825a/)
+- 🐦 [Twitter / X](https://x.com/Pranav62196016)
+- 📸 [Instagram](https://www.instagram.com/pranav_vp_07)
 
 ---
 
 ## 📄 License
 
-This project is licensed under the MIT License.
+This project is licensed under the **MIT License** — see the [LICENSE](LICENSE) file for details.
 ```
 
 ---
+
+Let me know if you’d like a badge section (e.g., GitHub stars, forks, license) or demo screenshots added!
