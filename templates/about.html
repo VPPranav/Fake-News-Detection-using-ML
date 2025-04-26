@@ -1,0 +1,1509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - FakeNewsGuard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+ /* Modern Classy Aesthetic CSS */
+:root {
+  /* Sophisticated color palette */
+  --primary-color: #6366f1;
+  --primary-light: #818cf8;
+  --primary-dark: #4f46e5;
+  --secondary-color: #10b981;
+  --secondary-light: #34d399;
+  --secondary-dark: #059669;
+  --danger-color: #ef4444;
+  --warning-color: #190756;
+  --dark-color: #1e293b;
+  --light-color: #f8fafc;
+  --gray-color: #64748b;
+  --gray-light: #94a3b8;
+  --gray-dark: #475569;
+  --body-bg: #f1f5f9;
+  --card-bg: #ffffff;
+  
+  /* Refined measurements */
+  --header-height: 70px;
+  --footer-height: 280px;
+  --border-radius-sm: 4px;
+  --border-radius: 8px;
+  --border-radius-lg: 12px;
+  --box-shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --box-shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  
+  /* Typography */
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  --font-serif: 'Georgia', 'Times New Roman', serif;
+  --font-mono: 'SF Mono', 'Monaco', 'Inconsolata', 'Fira Mono', 'Droid Sans Mono', 'Source Code Pro', monospace;
+}
+
+/* Base Styles with modern reset */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  line-height: 1.7;
+  color: var(--dark-color);
+  background-color: var(--body-bg);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding-bottom: var(--footer-height);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: var(--transition);
+  position: relative;
+}
+
+a:hover {
+  color: var(--primary-dark);
+}
+
+/* Elegant link underline animation */
+nav a:not(.logo):after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -2px;
+  left: 0;
+  background-color: var(--primary-color);
+  transition: width 0.3s ease;
+}
+
+nav a:not(.logo):hover:after {
+  width: 100%;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Typography refinements */
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.3;
+  font-weight: 700;
+  margin-bottom: 0.5em;
+  color: var(--dark-color);
+}
+
+h1 { font-size: 2.5rem; }
+h2 { font-size: 2rem; }
+h3 { font-size: 1.5rem; }
+h4 { font-size: 1.25rem; }
+h5 { font-size: 1.125rem; }
+h6 { font-size: 1rem; }
+
+p {
+  margin-bottom: 1.5rem;
+}
+
+/* Disclaimer Banner with refined animation */
+
+/* Disclaimer Banner */
+.disclaimer-banner {
+  background-color: var(--warning-color);
+  color: white;
+  padding: 8px 0;
+  text-align: center;
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+}
+
+.disclaimer-banner p {
+  display: inline-block;
+  padding-left: 100%;
+  animation: scroll-left 20s linear infinite;
+  font-weight: bold;
+}
+
+.disclaimer-banner i {
+  margin-right: 8px;
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* Modern Header */
+header {
+  background-color: var(--card-bg);
+  color: var(--dark-color);
+  padding: 0 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: var(--header-height);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: var(--box-shadow-sm);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+}
+
+.logo i {
+  font-size: 1.5rem;
+  margin-right: 0.75rem;
+  color: var(--primary-color);
+}
+
+.logo h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0;
+  background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+nav ul {
+  display: flex;
+  gap: 1.5rem;
+}
+
+nav ul li a {
+  color: var(--gray-dark);
+  font-weight: 500;
+  padding: 0.5rem 0.75rem;
+  border-radius: var(--border-radius);
+  display: flex;
+  align-items: center;
+  transition: var(--transition);
+}
+
+nav ul li a i {
+  margin-right: 0.5rem;
+  font-size: 1.125rem;
+}
+
+nav ul li a:hover {
+  color: var(--primary-color);
+}
+
+nav ul li a.active {
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+/* Main Content */
+main {
+  flex: 1;
+  padding: 0 0 3rem 0;
+}
+
+/* Hero Section with gradient overlay */
+.hero {
+  background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+  color: white;
+  padding: 5rem 2rem;
+  text-align: center;
+  margin-bottom: 3rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23ffffff' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E");
+  opacity: 0.6;
+}
+
+.hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.hero h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1.25rem;
+  color: white;
+  font-weight: 800;
+  letter-spacing: -0.025em;
+}
+
+.hero p {
+  font-size: 1.25rem;
+  opacity: 0.9;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Themed hero sections */
+.social-hero {
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+}
+
+.education-hero {
+  background: linear-gradient(135deg, #10b981, #059669);
+}
+
+.about-hero {
+  background: linear-gradient(135deg, #1e293b, #334155);
+}
+
+/* Form Styles with refined inputs */
+.check-news {
+  max-width: 900px;
+  margin: 0 auto 3rem;
+  padding: 0 1.5rem;
+}
+
+.check-news h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: var(--dark-color);
+  font-weight: 700;
+}
+
+form {
+  background-color: var(--card-bg);
+  padding: 2rem;
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--box-shadow);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: var(--gray-dark);
+}
+
+textarea,
+input[type="text"],
+input[type="url"] {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: var(--border-radius);
+  font-size: 1rem;
+  transition: var(--transition);
+  background-color: var(--light-color);
+  color: var(--dark-color);
+}
+
+textarea {
+  min-height: 150px;
+  resize: vertical;
+  line-height: 1.6;
+}
+
+textarea:focus,
+input:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.15);
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.75rem;
+}
+
+.btn {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: var(--border-radius);
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: var(--transition);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn i {
+  margin-right: 0.5rem;
+}
+
+.btn.primary {
+  background-color: var(--primary-color);
+  color: white;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.btn.primary:hover {
+  background-color: var(--primary-dark);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.btn.secondary {
+  background-color: var(--light-color);
+  color: var(--gray-dark);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.btn.secondary:hover {
+  background-color: #e2e8f0;
+  color: var(--dark-color);
+}
+
+/* Social Media Form with improved selectors */
+.social-icons-selector {
+  margin-bottom: 1.5rem;
+}
+
+.platform-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 0.75rem;
+}
+
+.platform-option {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  border-radius: var(--border-radius);
+  background-color: var(--light-color);
+  transition: var(--transition);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.platform-option:hover {
+  background-color: rgba(99, 102, 241, 0.05);
+  border-color: rgba(99, 102, 241, 0.2);
+}
+
+.platform-option input {
+  margin-right: 0.5rem;
+}
+
+.platform-option i {
+  margin-right: 0.5rem;
+  font-size: 1.125rem;
+}
+
+/* Results Section with card improvements */
+.results {
+  max-width: 900px;
+  margin: 0 auto 3rem;
+  padding: 0 1.5rem;
+}
+
+.result-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+
+.result-header h2 {
+  color: var(--dark-color);
+  margin-bottom: 0;
+}
+
+.prediction-badge {
+  padding: 0.5rem 1rem;
+  border-radius: 2rem;
+  font-weight: 600;
+  font-size: 1rem;
+  color: white;
+  letter-spacing: 0.02em;
+}
+
+.prediction-badge.fake {
+  background-color: var(--danger-color);
+}
+
+.prediction-badge.real {
+  background-color: var(--secondary-color);
+}
+
+.result-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.result-card {
+  background-color: var(--card-bg);
+  border-radius: var(--border-radius-lg);
+  padding: 1.5rem;
+  box-shadow: var(--box-shadow);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  transition: var(--transition);
+}
+
+.result-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--box-shadow-lg);
+}
+
+.result-card h3 {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  color: var(--dark-color);
+  font-size: 1.25rem;
+}
+
+.result-card h3 i {
+  margin-right: 0.75rem;
+  color: var(--primary-color);
+}
+
+.full-width {
+  grid-column: 1 / -1;
+}
+
+/* Confidence Meter with improved visuals */
+.confidence-meter {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  margin: 0 auto 1.5rem;
+}
+
+.confidence-value {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+/* Source Credibility with refined badges */
+.credibility-score {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.score-value {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: 2rem;
+  font-weight: 600;
+  font-size: 1.125rem;
+  color: white;
+}
+
+.score-value.high {
+  background-color: var(--secondary-color);
+}
+
+.score-value.medium {
+  background-color: var(--warning-color);
+}
+
+.score-value.low {
+  background-color: var(--danger-color);
+}
+
+.source-details {
+  margin-top: 1rem;
+}
+
+.source-details p {
+  margin-bottom: 0.5rem;
+}
+
+.no-data {
+  color: var(--gray-color);
+  font-style: italic;
+  text-align: center;
+  padding: 1.5rem;
+}
+
+/* Sentiment Analysis with improved meters */
+.sentiment-analysis {
+  margin-top: 1rem;
+}
+
+.emotional-meter {
+  margin-bottom: 1rem;
+}
+
+.meter-label,
+.bias-label {
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: var(--gray-dark);
+  display: flex;
+  justify-content: space-between;
+}
+
+.meter-bar {
+  height: 8px;
+  background-color: rgba(0, 0, 0, 0.05);
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 0.5rem;
+}
+
+.meter-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--primary-light), var(--primary-color));
+  border-radius: 4px;
+  transition: width 0.5s ease-out;
+}
+
+.meter-value {
+  text-align: right;
+  font-size: 0.875rem;
+  color: var(--gray-color);
+}
+
+.bias-indicator {
+  margin-bottom: 1rem;
+}
+
+.bias-value {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 1rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: white;
+}
+
+.bias-value.left {
+  background-color: #3b82f6;
+}
+
+.bias-value.right {
+  background-color: #ef4444;
+}
+
+.bias-value.neutral {
+  background-color: #64748b;
+}
+
+/* Fact Check with improved styling */
+.fact-check-results {
+  margin-bottom: 1rem;
+}
+
+.fact-check-item {
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.fact-check-item:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.fact-check-rating {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 1rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: white;
+  margin-bottom: 0.75rem;
+}
+
+.fact-check-rating.false {
+  background-color: var(--danger-color);
+}
+
+.fact-check-rating.mostly-false {
+  background-color: #f97316;
+}
+
+.fact-check-rating.mixed {
+  background-color: var(--warning-color);
+}
+
+.fact-check-rating.mostly-true {
+  background-color: #22c55e;
+}
+
+.fact-check-rating.true {
+  background-color: var(--secondary-color);
+}
+
+.suspicious-keywords {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px dashed rgba(0, 0, 0, 0.1);
+}
+
+.suspicious-keywords ul {
+  margin-top: 0.5rem;
+  padding-left: 1.5rem;
+}
+
+.suspicious-keywords li {
+  list-style-type: disc;
+  margin-bottom: 0.5rem;
+  color: var(--gray-dark);
+}
+
+/* Summary with improved typography */
+.summary-content h4 {
+  margin-bottom: 0.75rem;
+  color: var(--dark-color);
+}
+
+.summary-content p {
+  margin-bottom: 1rem;
+  line-height: 1.7;
+}
+
+
+.match-details h5 {
+  margin-bottom: 0.75rem;
+  color: var(--dark-color);
+}
+
+.match-details p {
+  margin-bottom: 0.5rem;
+  font-size: 0.875rem;
+}
+
+.similarity-score {
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
+/* Social Recommendations with improved list */
+.social-recommendations {
+  background-color: var(--card-bg);
+  border-radius: var(--border-radius-lg);
+  padding: 1.5rem;
+  box-shadow: var(--box-shadow);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.recommendation-list {
+  margin-top: 1rem;
+}
+
+.recommendation-list li {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.recommendation-list li:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.recommendation-list li i {
+  color: var(--primary-color);
+  margin-right: 0.75rem;
+  margin-top: 0.25rem;
+}
+
+/* Education Page with improved cards */
+.education-content {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.education-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.education-card {
+  background-color: var(--card-bg);
+  border-radius: var(--border-radius-lg);
+  padding: 2rem;
+  box-shadow: var(--box-shadow);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  transition: var(--transition);
+}
+
+.education-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--box-shadow-lg);
+}
+
+.card-icon {
+  width: 60px;
+  height: 60px;
+  background-color: rgba(99, 102, 241, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.card-icon i {
+  font-size: 1.5rem;
+  color: var(--primary-color);
+}
+
+.education-card h3 {
+  margin-bottom: 1rem;
+  color: var(--dark-color);
+}
+
+.checklist li,
+.resource-list li {
+  margin-bottom: 0.75rem;
+  padding-left: 1.75rem;
+  position: relative;
+}
+
+.checklist li:before {
+  content: "\f00c";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  position: absolute;
+  left: 0;
+  color: var(--secondary-color);
+}
+
+.resource-list li:before {
+  content: "\f0c1";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  position: absolute;
+  left: 0;
+  color: var(--primary-color);
+}
+
+/* Infographic with improved visuals */
+.infographic {
+  background-color: var(--card-bg);
+  border-radius: var(--border-radius-lg);
+  padding: 2rem;
+  box-shadow: var(--box-shadow);
+  margin-bottom: 3rem;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.infographic h3 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: var(--dark-color);
+  font-weight: 700;
+}
+
+.lifecycle-diagram {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.lifecycle-step {
+  flex: 1;
+  min-width: 150px;
+  max-width: 200px;
+  background-color: var(--light-color);
+  border-radius: var(--border-radius);
+  padding: 1.5rem;
+  text-align: center;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  transition: var(--transition);
+}
+
+.lifecycle-step:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--box-shadow);
+}
+
+.step-number {
+  width: 36px;
+  height: 36px;
+  background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 0.75rem;
+  font-weight: 700;
+}
+
+.step-content h4 {
+  margin-bottom: 0.75rem;
+  color: var(--dark-color);
+}
+
+.step-content p {
+  font-size: 0.875rem;
+  color: var(--gray-dark);
+}
+
+.lifecycle-arrow {
+  font-size: 1.5rem;
+  color: var(--gray-color);
+  display: flex;
+  align-items: center;
+}
+
+/* Video Resources with improved cards */
+.video-resources {
+  margin-bottom: 3rem;
+}
+
+.video-resources h3 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: var(--dark-color);
+  font-weight: 700;
+}
+
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.video-card {
+  background-color: var(--card-bg);
+  border-radius: var(--border-radius-lg);
+  padding: 1.5rem;
+  box-shadow: var(--box-shadow);
+  transition: var(--transition);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.video-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--box-shadow-lg);
+}
+
+.video-placeholder {
+  background-color: var(--light-color);
+  border-radius: var(--border-radius);
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+  cursor: pointer;
+  transition: var(--transition);
+  position: relative;
+  overflow: hidden;
+}
+
+.video-placeholder::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.1), rgba(79, 70, 229, 0.1));
+  opacity: 0;
+  transition: var(--transition);
+}
+
+.video-placeholder:hover::before {
+  opacity: 1;
+}
+
+.video-placeholder i {
+  font-size: 2.5rem;
+  color: var(--primary-color);
+  margin-bottom: 0.75rem;
+  transition: var(--transition);
+}
+
+.video-placeholder:hover i {
+  transform: scale(1.1);
+}
+
+.video-placeholder p {
+  font-size: 0.875rem;
+  color: var(--gray-color);
+  margin-bottom: 0;
+}
+
+.video-card h4 {
+  margin-bottom: 0.75rem;
+  color: var(--dark-color);
+}
+
+.video-card p {
+  font-size: 0.875rem;
+  color: var(--gray-dark);
+  margin-bottom: 0;
+}
+
+/* About Page with improved sections */
+.about-content {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.about-section {
+  background-color: var(--card-bg);
+  border-radius: var(--border-radius-lg);
+  padding: 2rem;
+  box-shadow: var(--box-shadow);
+  margin-bottom: 2rem;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.about-section h3 {
+  margin-bottom: 1.5rem;
+  color: var(--dark-color);
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.about-section p {
+  margin-bottom: 1rem;
+  line-height: 1.7;
+}
+
+.tech-features {
+  margin-top: 1.5rem;
+}
+
+.tech-feature {
+  display: flex;
+  margin-bottom: 1.5rem;
+}
+
+.tech-feature:last-child {
+  margin-bottom: 0;
+}
+
+.feature-icon {
+  width: 50px;
+  height: 50px;
+  background-color: rgba(99, 102, 241, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 1rem;
+  flex-shrink: 0;
+}
+
+.feature-icon i {
+  font-size: 1.25rem;
+  color: var(--primary-color);
+}
+
+.feature-content h4 {
+  margin-bottom: 0.75rem;
+  color: var(--dark-color);
+}
+
+.limitations-list,
+.roadmap-list {
+  margin-top: 1rem;
+  padding-left: 1.5rem;
+}
+
+.limitations-list li,
+.roadmap-list li {
+  list-style-type: disc;
+  margin-bottom: 0.75rem;
+  color: var(--gray-dark);
+}
+
+.contact-info {
+  margin-top: 1.5rem;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.contact-item i {
+  width: 40px;
+  height: 40px;
+  background-color: rgba(99, 102, 241, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 1rem;
+  color: var(--primary-color);
+}
+
+/* Modern Footer */
+footer {
+  background-color: var(--dark-color);
+  color: var(--light-color);
+  padding: 3rem 1.5rem 1.5rem;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: var(--footer-height);
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-section h3 {
+  color: white;
+  margin-bottom: 1.5rem;
+  font-size: 1.125rem;
+  font-weight: 600;
+  position: relative;
+  padding-bottom: 0.75rem;
+}
+
+.footer-section h3::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 40px;
+  height: 2px;
+  background-color: var(--primary-color);
+}
+
+.footer-section ul li {
+  margin-bottom: 0.75rem;
+}
+
+.footer-section ul li a {
+  color: var(--gray-light);
+  transition: var(--transition);
+}
+
+.footer-section ul li a:hover {
+  color: white;
+  padding-left: 0.25rem;
+}
+
+.social-icons {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.social-icons a {
+  width: 40px;
+  height: 40px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  transition: var(--transition);
+}
+
+.social-icons a:hover {
+  background-color: var(--primary-color);
+  transform: translateY(-3px);
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 1.5rem;
+  margin-top: 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  color: var(--gray-light);
+  font-size: 0.875rem;
+}
+
+/* Responsive Styles with improved breakpoints */
+@media (max-width: 992px) {
+  :root {
+    --header-height: 65px;
+    --footer-height: 350px;
+  }
+  
+  h1 { font-size: 2.25rem; }
+  h2 { font-size: 1.75rem; }
+  h3 { font-size: 1.35rem; }
+}
+
+@media (max-width: 768px) {
+  :root {
+    --header-height: 60px;
+    --footer-height: 450px;
+  }
+  
+  .logo h1 {
+    font-size: 1.25rem;
+  }
+  
+  nav ul {
+    gap: 0.75rem;
+  }
+  
+  nav ul li a {
+    padding: 0.5rem 0.5rem;
+    font-size: 0.875rem;
+  }
+  
+  .hero {
+    padding: 3rem 1.5rem;
+  }
+  
+  .hero h2 {
+    font-size: 2rem;
+  }
+  
+  .hero p {
+    font-size: 1rem;
+  }
+  
+  .result-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .lifecycle-diagram {
+    flex-direction: column;
+  }
+  
+  .lifecycle-arrow {
+    transform: rotate(90deg);
+    margin: 0.5rem 0;
+  }
+  
+  .footer-content {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  :root {
+    --footer-height: 600px;
+  }
+  
+  header {
+    flex-direction: column;
+    height: auto;
+    padding: 1rem;
+  }
+  
+  .logo {
+    margin-bottom: 1rem;
+  }
+  
+  nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+  
+  .form-actions {
+    flex-direction: column;
+  }
+  
+  .btn {
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+  
+  #image-search-form {
+    flex-direction: column;
+  }
+  
+  .footer-content {
+    grid-template-columns: 1fr;
+  }
+  
+  .hero h2 {
+    font-size: 1.75rem;
+  }
+}
+
+/* Animation Utilities */
+.fade-in {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.slide-up {
+  animation: slideUp 0.5s ease-out;
+}
+
+@keyframes slideUp {
+  from { 
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to { 
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Accessibility Improvements */
+:focus {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 2px;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* Print Styles */
+@media print {
+  body {
+    background: white;
+    color: black;
+  }
+  
+  header, footer, .disclaimer-banner {
+    display: none;
+  }
+  
+  main {
+    padding: 0;
+  }
+  
+  .result-card, .about-section, form {
+    box-shadow: none;
+    border: 1px solid #ddd;
+  }
+}
+    </style>
+</head>
+<body>
+    <div class="disclaimer-banner">
+        <p><i class="fas fa-exclamation-triangle"></i> DISCLAIMER: These predictions are only based on global news from years 2015, 2016 and 2017</p>
+    </div>
+
+    <header>
+        <div class="logo">
+            <i class="fas fa-newspaper"></i>
+            <h1>FakeNewsGuard</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('index') }}"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="{{ url_for('social_check') }}"><i class="fas fa-hashtag"></i> Social Media Check</a></li>
+                <li><a href="{{ url_for('education') }}"><i class="fas fa-graduation-cap"></i> Learn</a></li>
+                <li><a href="{{ url_for('about') }}" class="active"><i class="fas fa-info-circle"></i> About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero about-hero">
+            <div class="hero-content">
+                <h2>About FakeNewsGuard</h2>
+                <p>Our mission, technology, and the team behind the tool.</p>
+            </div>
+        </section>
+
+        <section class="about-content">
+            <div class="about-section">
+                <h3>Our Mission</h3>
+                <p>FakeNewsGuard was created with a simple but crucial mission: to help people identify misinformation and make more informed decisions about the content they consume and share.</p>
+                <p>In today's digital landscape, misinformation spreads faster than ever before. Our tool combines machine learning, natural language processing, and media literacy principles to provide a comprehensive analysis of news content.</p>
+                <p>We believe that by empowering individuals with the right tools and knowledge, we can collectively reduce the spread and impact of fake news.</p>
+            </div>
+
+            <div class="about-section">
+                <h3>Our Technology</h3>
+                <div class="tech-features">
+                    <div class="tech-feature">
+                        <div class="feature-icon">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <div class="feature-content">
+                            <h4>Machine Learning Model</h4>
+                            <p>Our core detection system uses a logistic regression model trained on thousands of real and fake news articles from 2015-2017. The model analyzes text patterns, linguistic features, and contextual cues to identify potentially misleading content.</p>
+                        </div>
+                    </div>
+                    <div class="tech-feature">
+                        <div class="feature-icon">
+                            <i class="fas fa-database"></i>
+                        </div>
+                        <div class="feature-content">
+                            <h4>Source Credibility Database</h4>
+                            <p>We maintain a database of news sources with credibility scores based on their history of factual reporting, transparency, and editorial standards.</p>
+                        </div>
+                    </div>
+                    <div class="tech-feature">
+                        <div class="feature-icon">
+                            <i class="fas fa-search"></i>
+                        </div>
+                        <div class="feature-content">
+                            <h4>Fact-Checking Integration</h4>
+                            <p>Our system cross-references content with established fact-checking organizations to identify previously debunked claims.</p>
+                        </div>
+                    </div>
+                    <div class="tech-feature">
+                        <div class="feature-icon">
+                            <i class="fas fa-image"></i>
+                        </div>
+                        <div class="feature-content">
+                            <h4>Image Verification</h4>
+                            <p>Our reverse image search functionality helps identify manipulated or out-of-context images that are often used in fake news.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="about-section">
+                <h3>Limitations</h3>
+                <p>While we strive for accuracy, it's important to understand the limitations of our tool:</p>
+                <ul class="limitations-list">
+                    <li>Our model is trained on news from 2015-2017 and may not recognize newer patterns of misinformation.</li>
+                    <li>No AI system is perfect - we recommend using our tool as one of several resources when evaluating news.</li>
+                    <li>Our system works best with English-language content.</li>
+                    <li>Satire and opinion pieces may sometimes be flagged as potentially misleading.</li>
+                    <li>The tool analyzes text content and may miss misinformation conveyed through images or videos alone.</li>
+                </ul>
+            </div>
+
+            <div class="about-section">
+                <h3>Future Development</h3>
+                <p>We're constantly working to improve FakeNewsGuard. Our roadmap includes:</p>
+                <ul class="roadmap-list">
+                    <li>Expanding our training data to include more recent news articles</li>
+                    <li>Adding support for more languages</li>
+                    <li>Improving our image analysis capabilities</li>
+                    <li>Developing browser extensions for real-time analysis</li>
+                    <li>Creating an API for developers to integrate our technology</li>
+                </ul>
+            </div>
+
+            <div class="about-section">
+                <h3>Contact Us</h3>
+                <p>Have questions, feedback, or suggestions? We'd love to hear from you!</p>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>pranavvp1507@gmail.com</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Rajajinagar,Bengaluru-560010,India</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>FakeNewsGuard</h3>
+                <p>An advanced AI-powered fake news detection tool to help combat misinformation.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="{{ url_for('index') }}">Home</a></li>
+                    <li><a href="{{ url_for('social_check') }}">Social Media Check</a></li>
+                    <li><a href="{{ url_for('education') }}">Educational Resources</a></li>
+                    <li><a href="{{ url_for('about') }}">About</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Connect</h3>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/pranav_vp_07?utm_source=qr&igsh=MXNjeGlzZTk5MDdlNg==" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://x.com/Pranav62196016?t=qX5QCJn-dlJGcb-wjK9oeA&s=08" aria-label="X"><i class="fab fa-x"></i></a>
+                    <a href="https://www.linkedin.com/in/pranav-vp-3636b825a/" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom" style=" color: #000;">
+        <p>&copy; 2025 FakeNewsGuard(Developed By Pranav V P) All rights reserved.</p>
+    </div>
+    </footer>
+
+    <script>
+        // Scrolling disclaimer
+        document.addEventListener('DOMContentLoaded', function() {
+            const disclaimer = document.querySelector('.disclaimer-banner p');
+            let position = 0;
+            
+            function scrollDisclaimer() {
+                position--;
+                if (position < -disclaimer.offsetWidth) {
+                    position = window.innerWidth;
+                }
+                disclaimer.style.transform = `translateX(${position}px)`;
+                requestAnimationFrame(scrollDisclaimer);
+            }
+            
+            scrollDisclaimer();
+        });
+    </script>
+</body>
+</html>
